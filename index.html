@@ -1,449 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
-
-</head>
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        border: 0px red solid;
-
-    }
-
-
-    .btr {
-        width: 300px;
-        height: 60px;
-        padding: 0px 20px;
-        background-color: rgb(0, 0, 0);
-        margin-top: 80px;
-        border-radius: 20px;
-        color: #ffffff;
-        text-align: center;
-    }
-</style>
-
-<body>
-    <div class="qr">
-        <div class="hd">
-            <h1>Contacto Lhuis</h1>
-        </div>
-        <div class="divimg">
-            <!--============= QR CODE  ================================== -->
-            <img class="dvdvdv"
-                src="https://res.cloudinary.com/fotoqe123/image/upload/v1716849610/ABAUT/about-img_jicci8_ud4ksc_sggmtq.png"
-                alt="">
-        </div>
-
-    </div>
-
-    <div class="cxx">
-        <div class="com-aa">
-            <a href="https://lhuisruiz.github.io/LhuisP/play.html"> <button class="btr">Ver Peliculas, Series, Anime y
-                    Juegos Gratis.</button></a>
-        </div>
-    </div>
-    </div>
-
-    <!---Contacto-->
-    <div class="n">
-        <div class="negro">
-            <p class="np">Contacto.</p>
-            <div class="nc">
-                <a href="https://ruizlhuis.github.io/ccccc/" target="_blank"><button><i
-                            class="fa-brands fa-whatsapp fa-shake " style="color: green;"></i>
-                        +54 1144382987</button></a>
-                <a href="https://ruizlhuis.github.io/ccccc/1.html" target="_blank"><button><i
-                            class="fa-solid fa-phone fa-beat" style="color: rgb(255, 0, 0);"></i>
-                        +54 1144382987</button></a>
-                <a href="https://ruizlhuis.github.io/ccccc/5.html" target="_blank"><button><i
-                            class="fa-brands fa-instagram fa-flip" style="color: rgb(255, 145, 0);"></i>
-                        @ruizlhuis</button></a>
-                <a href="https://ruizlhuis.github.io/ccccc/2.html" target="_blank"><button><i
-                            class="fa-brands fa-instagram fa-flip" style="color: rgb(255, 174, 0);"></i>
-                        @lhuruiz</button></a>
-                <a href="https://ruizlhuis.github.io/ccccc/2.html" target="_blank"><button><i
-                            class="fa-brands fa-tiktok fa-bounce" style="color: rgb(0, 204, 255);"></i>
-                        @lhuruiz</button></a>
-                <a href="https://ruizlhuis.github.io/ccccc/2.html" target="_blank"><button><i
-                            class="fa-brands fa-facebook" style="color: rgb(19, 49, 241);"></i> lhuis ruz</button></a>
-                <a href="https://ruizlhuis.github.io/ccccc/2.html" target="_blank"><button><i
-                            class="fa-brands fa-telegram  fa-beat" style="color: rgb(0, 247, 255);"></i> +54
-                        1144382987</button></a>
-                <a href="https://ruizlhuis.github.io/ccccc/6.html" target="_blank"><button><i
-                            class="fa-solid fa-envelope  fa-spin-pulse" style="color: rgb(201, 174, 53);"></i>
-                        lhuisuz@gmail.com</button></a>
-                <a href="https://ruizlhuis.github.io/ccccc/4.html" target="_blank"><button><i
-                            class="fa-solid fa-envelope fa-spin-pulse"
-                            style="color:#e34133;"></i>ruizlhuis@gmail.com</button></a>
-                <a href="https://ruizlhuis.github.io/ccccc/3.html" target="_blank"><button><i
-                            class="fa-brands fa-microsoft fa-shake"
-                            style="color: rgb(14, 65, 159);"></i>lhuisruiz@outlook.com</button></a>
-            </div>
-        </div>
-
-
-        <p id="alert" style="
-    width: 100%;
-    font-size: 25px;
-    text-align: center;
-    background-color: #333333;
-    color: #ffffff;
-    /*pocision fija*/
-    position: fixed;
-    /*fija*/
-    margin: auto;
-    bottom: 100px;
-    padding: 0px 0;
-    display: none;">Listo Para Compartir </p>
-</body>
-
-
-
-
-
-
-
-
-
-<style>
-    .dvdvdv {
-        border-radius: 50%;
-        margin-top: 60px;
-        box-shadow: 1px 1px 15px 1px #000000a1;
-    }
-
-    body {
-        background-color: rgb(255, 255, 255);
+    <title>Base de Datos de Álbumes de Fotos</title>
+    <style>
+        body { font-family: sans-serif; background: #0b0117; color: white; padding: 20px; }
+        .usuario-bloque { background: #1c0636; border: 1px solid #3c1269; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+        .correo-header { font-size: 18px; font-weight: bold; color: #00f0ff; margin-bottom: 15px; border-bottom: 2px solid #3c1269; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+        input { background: #0b0117; border: 1px solid #3c1269; color: white; padding: 10px; width: 100%; border-radius: 4px; box-sizing: border-box; margin-bottom: 5px; }
+        .fila-link { margin-bottom: 20px; padding: 10px; border: 1px solid #3c1269; border-radius: 8px; }
+        .controles { display: flex; align-items: center; gap: 10px; margin-top: 5px; }
+        .foto-thumb { width: 60px; height: 60px; object-fit: cover; border-radius: 8px; cursor: pointer; border: 2px solid #00f0ff; transition: 0.3s; }
+        .foto-thumb:hover { transform: scale(1.1); }
         
-    }
+        /* Estilo para el nombre solo lectura */
+        .nombre-display { color: #ffcc00; font-weight: bold; margin-bottom: 5px; font-size: 15px; display: block; }
+        
+        .modal { display: none; position: fixed; z-index: 100; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+        .modal-contenido { background: #1c0636; padding: 25px; border-radius: 12px; text-align: center; border: 1px solid #3c1269; width: 90%; max-width: 800px; }
+        .modal-contenido img { max-width: 100%; max-height: 60vh; object-fit: contain; margin-bottom: 20px; border-radius: 8px; }
+        
+        .bloque-nuevo { background: #2b0b4d; border: 2px dashed #00f0ff; padding: 20px; border-radius: 12px; margin-bottom: 30px; }
+        .btn-accion { cursor: pointer; border: none; padding: 10px; border-radius: 4px; color: white; }
+    </style>
+</head>
+<body>
 
-    .hd {
-        width: 100%;
-        height: auto;
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
+<div style="max-width: 800px; margin: auto;">
+    <h2>🗄️ Base de Datos de Álbumes de Fotos</h2>
 
-    .qr {
-        background: #fdfdfd00;
-        width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        align-content: center;
-        justify-content: space-between;
-    }
+    <div class="bloque-nuevo">
+        <h3 style="margin-top:0;">+ Agregar nuevo álbum</h3>
+        <input type="email" id="new-correo" placeholder="Correo electrónico" style="margin-bottom: 10px;">
+        <input type="url" id="new-link" placeholder="Pega aquí el Link del álbum">
+        <button onclick="agregarDesdeFormulario()" class="btn-accion" style="background:#00c853; width:100%; font-weight:bold;">Registrar Álbum</button>
+    </div>
 
-    p {
-        margin: 20px;
-        color: #000;
-    }
+    <div id="contenedor-bloques"></div>
+</div>
 
-    img {
-        width: 300px;
+<div id="modalZoom" class="modal">
+    <div class="modal-contenido">
+        <img id="imgZoom" src="">
+        <input type="text" id="inputFoto" placeholder="Nueva URL de foto..." style="width: 100%; margin-bottom: 20px; padding: 12px;">
+        <div style="display: flex; gap: 10px; justify-content: center;">
+            <button onclick="guardarFoto()" class="btn-accion" style="background:#00c853; padding:12px 30px;">Guardar Foto</button>
+            <button onclick="document.getElementById('modalZoom').style.display='none'" class="btn-accion" style="background:#444; padding:12px 30px;">Cerrar</button>
+        </div>
+    </div>
+</div>
 
-    }
-
-    .divig {
-        width: 100%;
-        height: 500px;
-    }
-
-    .n {
-        width: 100%;
-        margin-top: 100px;
-        height: 500px;
-        background: #c2080800;
-        border-radius: 20px 20px 0px 0px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        flex-wrap: nowrap;
-    }
-
-    .negro {
-        width: 400px;
-        height: 500px;
-        background: #000;
-        border-radius: 20px 20px 0px 0px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        flex-wrap: nowrap;
-    }
-
-    .nc {
-        width: 400px;
-        height: auto;
-        background-color: #ec161600;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        flex-wrap: wrap;
-    }
-
-    button {
-        width: 300px;
-        padding: 10px;
-        border: none;
-        background-color: rgba(0, 255, 255, 0);
-        margin-top: 3px;
-        margin-bottom: 3px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        color: #ffffff;
-    }
-
-    i {
-        margin-left: 20px;
-        margin-right: 20px;
-        color: #ffffff;
-    }
-
-    .np {
-        color: #ffffff;
-    }
-
-
-    @media (max-width: 600px) {
-        img {
-            width: 50%;
-        }
-
-        .nc {
-            width: 100%;
-        }
-
-        .negro {
-            width: 90%;
-        }
-
-
-    }
-
-    @media (max-width: 290px) {
-        img {
-            width: 90%;
-        }
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    /*=============Compartir================*/
-    .cmp {
-        margin-top: 100px;
-        margin-bottom: 20px;
-        width: auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .cxx {
-        width: 100%;
-        height: auto;
-        background-color: rgba(0, 60, 255, 0);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-    }
-
-    .com-aa {
-        width: 250px;
-    height: 50px;
-    background-color: rgba(0, 255, 255, 0);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 900;
-    }
-
-    .tot {
-        width: 100%;
-        height: auto;
-        background-color: rgba(0, 60, 255, 0);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        margin-bottom: 100px;
-    }
-
-    .com {
-        width: 100%;
-        height: auto;
-        background-color: rgb(0, 60, 255);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: 100px;
-    }
-
-
-    .com-a {
-        width: 90%;
-        height: 50px;
-        background-color: rgba(0, 255, 255, 0);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-family: 'Quicksand', sans-serif;
-    }
-
-    .bn {
-        width: 70px;
-        height: auto;
-        background-color: rgba(255, 0, 0, 0);
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-    }
-
-    @media (min-width: 800px) {
-        .com {
-            width: 40%;
-            background-color: rgba(255, 0, 0, 0);
-        }
-    }
-
-    @media (min-width: 800px) {
-        .com-a {
-            width: 40%;
-            background-color: rgba(255, 0, 0, 0);
-        }
-    }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    function copy(copyId) {
-        let inputElement = document.createElement("input");
-        inputElement.type = "text";
-        let copyText = document.getElementById(copyId).innerHTML;
-        inputElement.value = copyText;
-        document.body.appendChild(inputElement);
-        inputElement.select();
-        document.execCommand('copy');
-        document.body.removeChild(inputElement);
+    const urlAPI = 'https://api.sheetbest.com/sheets/6611ccee-bded-483e-b791-767bdcc2ffed';
+    let idActual = "";
 
-        document.getElementById("alert").style.display = "block";
-        setTimeout(function () {
-            document.getElementById("alert").style.display = "none";
-        }, 3000);
+    async function obtenerMetadatos(url) {
+        try {
+            const res = await fetch(`https://api.microlink.io?url=${encodeURIComponent(url)}`);
+            const json = await res.json();
+            return {
+                nombre: json.data.title || "Álbum sin título",
+                foto: json.data.image ? json.data.image.url : "https://via.placeholder.com/150"
+            };
+        } catch (e) {
+            return { nombre: "Álbum", foto: "https://via.placeholder.com/150" };
+        }
     }
 
+    async function cargar() {
+        const res = await fetch(urlAPI);
+        const data = await res.json();
+        const contenedor = document.getElementById('contenedor-bloques');
+        contenedor.innerHTML = '';
+
+        const grupos = {};
+        data.forEach(item => {
+            if (!grupos[item.Correo]) grupos[item.Correo] = [];
+            grupos[item.Correo].push(item);
+        });
+
+        Object.keys(grupos).forEach(correo => {
+            const div = document.createElement('div');
+            div.className = 'usuario-bloque';
+            
+            const enlaces = grupos[correo].map(item => `
+                <div class="fila-link">
+                    <span class="nombre-display">${item.Nombre || 'Sin nombre'}</span>
+                    
+                    <div class="controles">
+                        <img src="${item.Foto}" class="foto-thumb" onclick="abrirEditor('${item.ID}', '${item.Foto}')">
+                        <input value="${item.Link}" placeholder="Link del Álbum" onchange="actualizarDatosLink('${item.ID}', this.value)">
+                        <button onclick="copiarLink('${item.Link}')" class="btn-accion" style="background:#f39c12;" title="Copiar">📋</button>
+                        <button onclick="eliminar('${item.ID}')" class="btn-accion" style="background:red;">X</button>
+                    </div>
+                </div>
+            `).join('');
+
+            div.innerHTML = `
+                <div class="correo-header">
+                    <span> ${correo}</span>
+                    <button onclick="agregarLink('${correo}')" class="btn-accion" style="background:#0088ff;">+ Nuevo Link</button>
+                </div>
+                ${enlaces}
+            `;
+            contenedor.appendChild(div);
+        });
+    }
+
+    async function actualizarDatosLink(id, link) {
+        await editar(id, 'Link', link);
+        const meta = await obtenerMetadatos(link);
+        await editar(id, 'Nombre', meta.nombre);
+        await editar(id, 'Foto', meta.foto);
+        cargar();
+    }
+
+    async function agregarDesdeFormulario() {
+        const correo = document.getElementById('new-correo').value;
+        const link = document.getElementById('new-link').value;
+        if(!correo || !link) return alert("Completa correo y link");
+        
+        const meta = await obtenerMetadatos(link);
+        await fetch(urlAPI, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ ID: "ID-" + Date.now(), Correo: correo, Nombre: meta.nombre, Link: link, Foto: meta.foto })
+        });
+        document.getElementById('new-correo').value = '';
+        document.getElementById('new-link').value = '';
+        cargar();
+    }
+
+    async function agregarLink(correo) {
+        const newID = "ID-" + Date.now();
+        await fetch(urlAPI, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ ID: newID, Correo: correo, Nombre: "Nuevo Álbum", Link: "", Foto: "https://via.placeholder.com/150" })
+        });
+        cargar();
+    }
+
+    function copiarLink(l) { navigator.clipboard.writeText(l).then(() => alert("Copiado!")); }
+    function abrirEditor(id, url) { idActual = id; document.getElementById('imgZoom').src = url; document.getElementById('inputFoto').value = url; document.getElementById('modalZoom').style.display = 'flex'; }
+    async function guardarFoto() { const nuevaUrl = document.getElementById('inputFoto').value; await editar(idActual, 'Foto', nuevaUrl); document.getElementById('modalZoom').style.display = 'none'; cargar(); }
+    async function editar(id, col, val) { await fetch(`${urlAPI}/ID/${id}`, { method: 'PATCH', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ [col]: val }) }); }
+    async function eliminar(id) { if(confirm('¿Borrar?')) { await fetch(`${urlAPI}/ID/${id}`, { method: 'DELETE' }); cargar(); } }
+
+    cargar();
 </script>
-<script>
-    function qr1() {
-        Swal.fire({
-            imageUrl: 'https://lh3.googleusercontent.com/u/9/drive-viewer/AEYmBYQl041MAL6r4LLfYi9a-Fb2m7qYX9nMABzB93MVUhrkUiNP85ahb3dTku27-ZszBM6dxt5EPWWuMGAygzVnIHVdQ7IZQQ=w1357-h646',
-
-            //tamaño
-            imageWidth: 300,
-            imageHeight: 300,
-            //cerrar
-            padding: '1rem',
-            showCloseButton: true,
-            showConfirmButton: false,
-            backdrop: `
-        rgb(54 54 54 / 58%)  `,
-            background: 'linear-gradient(#000,#000)',
-        })
-    }
-
-    function qr2() {
-        Swal.fire({
-            imageUrl: 'https://lh3.googleusercontent.com/u/9/drive-viewer/AEYmBYSLt_fB3PJsGap9WXplUC_5Di0EhPly3fXZ3EhntJ2rJJxHN4K0bzawKEpeXvSQz32gOb3GLqXtOrGuo6AFyjEpKoNteQ=w1357-h645',
-
-            //tamaño
-            imageWidth: 300,
-            imageHeight: 300,
-            //cerrar
-            padding: '1rem',
-            showCloseButton: true,
-            showConfirmButton: false,
-            backdrop: `
-        rgb(54 54 54 / 58%)  `,
-            background: 'linear-gradient(#000,#000)',
-        })
-    }
-
-    function qr3() {
-        Swal.fire({
-            imageUrl: 'https://lh3.googleusercontent.com/u/9/drive-viewer/AEYmBYQYh3NQDAScDLoPnfnjUiLSNymm9YLrYvwJErxtA19KD_PcryIAAMOVqpCb9TkSvq9doxtJQT50pC69vPkHxujYkEor2Q=w1357-h645',
-
-            //tamaño
-            imageWidth: 300,
-            imageHeight: 300,
-            //cerrar
-            padding: '1rem',
-            showCloseButton: true,
-            showConfirmButton: false,
-            backdrop: `
-        rgb(54 54 54 / 58%)  `,
-            background: 'linear-gradient(#000,#000)',
-        })
-    }
-
-    function qr4() {
-        Swal.fire({
-            imageUrl: 'https://lh3.googleusercontent.com/u/9/drive-viewer/AEYmBYQq8UipRVXSRvC009GBDd_tg93tKJ_izqOE2kDVNk8Hfy4GruySgytu5Ey2TJ0uufLqhDajGmGPKdBDoG8KhpcXTF-R=w909-h645',
-
-            //tamaño
-            imageWidth: 300,
-            imageHeight: 300,
-            //cerrar
-            padding: '1rem',
-            showCloseButton: true,
-            showConfirmButton: false,
-            backdrop: `
-        rgb(54 54 54 / 58%)  `,
-            background: 'linear-gradient(#000,#000)',
-        })
-    }
-</script>
-
+</body>
 </html>
